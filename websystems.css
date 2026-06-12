@@ -199,6 +199,40 @@ body {
   margin: 20px 0;
 }
 
+.introGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+  margin-left: 20px; /* matches UL indent feel */
+}
+
+.introItem {
+  background-color: #1D1B2C;   /* matches your main boxes */
+  padding: 12px 15px;
+  border-radius: 6px;
+  color: #6b6380;
+  font-size: 18px;
+
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  border: 1px solid #282539;  /* subtle structure */
+  transition: all 0.25s ease;
+}
+
+.introItem:hover {
+  background-color: #894766;
+  color: white;
+  cursor: pointer;
+  transform: translateY(-2px);
+  border-color: #894766;
+}
+
+.introItem::before {
+  content: "▹";
+  color: #894766;
+  margin-right: 8px;
+}
+
 @media only screen and (max-width: 800px) {
 
   .sideprofilepic img {
