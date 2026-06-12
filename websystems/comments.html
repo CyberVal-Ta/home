@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Comments page</title>
+    <link rel="stylesheet" href="websystems.css">
+    <!-- Index is Home Page -->
+    <!-- make sure to fill out rel and href later once style sheets are made-->
+    <!-- This home page should be a short introduction to yourself and your website. Do not post private information here as this page will be public.-->
+</head>
+
+<body>
+
+
+    <header>
+        <div class="topbannercontainer">
+            <img src="Images/TopBanner.jpg" alt="Top Banner" style="width:100%">
+            <!-- Figure out why its not working-->
+            <a href="index.html" class="topbannertext">
+                <h1>Welcome To Valentin's Website</h1>
+                <p> Its actually Vani Ta's website Valentin is just a prefered name</p>
+            </a>
+        </div>
+
+
+    </header>
+
+    <div class="navbar">
+        <!-- This is the Nav bar but maybe add image/banner before the nav bar and use position sticky later -->
+        <ul>
+            <li><a href="index.html">Home Page</a></li>
+            <li><a href="past.html">My Past</a></li>
+            <li><a href="future.html">My Future</a></li>
+            <li><a href="comments.html">Comments</a></li>
+
+        </ul>
+    </div>
+
+    <!-- change the main class back if the website doesnt work-->
+    <main class="CommentPageContainer">
+
+        <!-- attempt on the sidebar if it doesnt work like the past page remove and turn it into cards like the future page-->
+        <aside class="CommentSideBar">
+            <div class="CommentSideBox">
+                <a href="TopSection">Website Structure & Layout</a>
+                <div class="CommentSideContainer">
+                    <h1>Pages include:</h1>
+
+                    <ul>
+                        <li>Index Page → Home Page/Introduction to the Website </li>
+                        <li>Past Page → Page that describes my Computing Experiences</li>
+                        <li>Future Page → Page that describes my Future Goals in Computing</li>
+                        <li>Comments Page → Reflection page to reflect on the design, structure and usability of the
+                            Website
+                        </li>
+
+                    </ul>
+
+                    <h1>Overall Structure of the Website</h1>
+
+                    <p>All pages are connected through a consistent navigation bar that stays visible at the top of the
+                        screen,
+                        ensuring easy and accessible movement between sections. The index page serves as the central
+                        hub, while
+                        the banner title also links back to the home page, to reinforce a simple and intuitive
+                        navigation.
+                    </p>
+
+                    <img src="Images/NavbarExplained.png" alt="NavbarExplained" style="width:100%">
+
+                </div>
+            </div>
+
+            <div class="CommentSideBox">
+                <a href="MidSection">Inter Structures</a>
+                <div class="CommentSideContainer">
+
+                    <p> Each page although is designed to be visually different, it follows the same internal structure
+                        to maintain
+                        consistency between pages. This consistent structure ensures the site is predictable, easy to
+                        use, and well-organised
+                        across all pages.
+                    </p>
+
+                    <ul>
+                        <li>Header: A section that contains the banner as well as the title</li>
+                        <li>Navigation Bar: A section that contains all links to other pages </li>
+                        <li>Main: A section that includes different strucutures made of different containers
+                            that displays unique content
+                        </li>
+
+                    </ul>
+
+                    <p>Different pages use different layouts for variety:
+
+                    <ul>
+                        <li>Index: flexbox for intro sections</li>
+                        <li>Past: timeline with left/right alternating entries for a story-like flow</li>
+                        <li>Future: grid-based split layout with interactive cards</li>
+                        <li>Comments: sidebar + main content with slideshow to break up text</li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="CommentSideBox">
+                <a href="BottomSection">Design Choices</a>
+                <div class="CommentSideContainer">
+
+                    <h1>Colour Scheme:</h1>
+                    <p>Colour Choice: The colours were chosen based on a colour palette from the Banner Image to create
+                        a consistent colour scheme</p>
+                    <p>Gradient Background: <code>#282539</code> to <code>#894766</code> for a modern and appealing look
+                        which uses
+                        <code>background-size: cover</code> so it scales to screen sizes
+                    </p>
+
+                    <h1>Fonts:</h1>
+                    <p>Font Family: The font family Gill Sans, Calibri, Trebuchet MS, sans-serif was selected for clean
+                        readability and a modern, simple feel</p>
+                    <p>Text Formating: Headings are larger and bold with text shadows, making them stand out against
+                        dark backgrounds</p>
+
+                    <h1>Layout:</h1>
+                    <p>Structure:Using flexbox and grid ensures the site is responsive and adapts to smaller screens</p>
+
+                    <h1>Interactivity:</h1>
+                    <p>Features:Interactive features like the timeline markers, card reveals and slideshow make the site
+                        more engaging while still simple to use</p>
+
+                    <h1>Consistency:</h1>
+                    <p>Each page has its own unique layout, the consistent colour palette, fonts and navbar create a
+                        unified look and feel across the site</p>
+
+                    <small>Realistically I picked this colour scheme mainly due to the fact it also matches with
+                        Cyberpunk fashion</small>
+
+
+                </div>
+            </div>
+        </aside>
+
+
+        <section class="mainContentForComments">
+            <h1>Graphic Design Discussion</h1>
+            <!-- ps to the people who gotta read through this later sorry for all the comments its just reminders for me-->
+            <div id="TopSection" class="SectionThing">
+                <!-- i ran out of names sorry-->
+                <h2>CSS Structure</h2>
+
+                <!-- make a table for this one -->
+
+                <h3>All Page</h3>
+                <table>
+                    <tr>
+                        <th>Selector</th>
+                        <th>Type</th>
+                        <th>Effect</th>
+                    </tr>
+                    <tr>
+                        <td>body</td>
+                        <td>Element</td>
+                        <td>Applies gradient background and sets global font</td>
+
+                    </tr>
+                    <tr>
+                        <td>.navbar, .navbar ul, .navbar a</td>
+                        <td>Class</td>
+                        <td>Creates sticky top navigation bar with hover/active states</td>
+
+                    </tr>
+                    <tr>
+                        <td>@media only screen and (max-width: 800px)</td>
+                        <td>Media Query</td>
+                        <td>Adjusts layouts (e.g., stacks ".mainboxes" vertically) for small screens</td>
+
+                    </tr>
+
+                </table>
+
+                <h3>Index Page</h3>
+                <table>
+                    <tr>
+                        <th>Selector</th>
+                        <th>Type</th>
+                        <th>Effect</th>
+                    </tr>
+                    <tr>
+                        <td>.topbannercontainer</td>
+                        <td>Class</td>
+                        <td>Positions banner image and overlay text</td>
+
+                    </tr>
+                    <tr>
+                        <td>.mainboxes, .sideintrobox, .mainintrobox</td>
+                        <td>Class</td>
+                        <td>Flexbox layout for introduction boxes; responsive fallback at smaller widths</td>
+
+                    </tr>
+                </table>
+
+                <h3>Past Page</h3>
+                <table>
+                    <tr>
+                        <th>Selector</th>
+                        <th>Type</th>
+                        <th>Effect</th>
+                    </tr>
+
+                    <tr>
+                        <td>.Pastbody</td>
+                        <td>Class</td>
+                        <td>Creates grid with sidebar and timeline section</td>
+
+                    </tr>
+                    <tr>
+                        <td>.Timeline, .TimelineCircle, .Timelinecontainer</td>
+                        <td>Class</td>
+                        <td>Vertical timeline with alternating left/right entries and circle markers</td>
+
+                    </tr>
+
+                </table>
+
+                <h3>Future Page</h3>
+                <table>
+                    <tr>
+                        <th>Selector</th>
+                        <th>Type</th>
+                        <th>Effect</th>
+                    </tr>
+                    <tr>
+                        <td>.spiltLayout</td>
+                        <td>Class</td>
+                        <td>Grid layout dividing page into two main sections</td>
+
+                    </tr>
+                    <tr>
+                        <td>.FutureCardsSpilt, .Spilt3Grid</td>
+                        <td>Class</td>
+                        <td>CSS grid layout for future goals cards and 3-column split</td>
+
+                    </tr>
+                    <tr>
+                        <td>#ClickCard1:checked + .FutureCards p</td>
+                        <td>ID + Pseudo-class</td>
+                        <td>Reveals hidden text when card is clicked (checkbox hack)</td>
+
+                    </tr>
+
+                </table>
+
+                <h3>Comments Page</h3>
+                <table>
+                    <tr>
+                        <th>Selector</th>
+                        <th>Type</th>
+                        <th>Effect</th>
+                    </tr>
+                    <tr>
+                        <td>.CommentPageContainer</td>
+                        <td>Class</td>
+                        <td>Flexbox layout splitting sidebar and main content</td>
+
+                    </tr>
+                    <tr>
+                        <td>.CommentSideBar</td>
+                        <td>Class</td>
+                        <td>Sticky sidebar with quick links</td>
+
+                    </tr>
+                    <tr>
+                        <td>.Slideshow, .slide, #Slide1:checked ~ .s1</td>
+                        <td>Class + ID + Pseudo-class</td>
+                        <td>Interactive slideshow controlled by hidden radio buttons</td>
+
+                    </tr>
+                </table>
+
+
+
+            </div>
+
+            <div id="MidSection" class="SectionThing">
+
+
+                <h2>Graphic Design Discussion</h2>
+
+                <!-- if the text formating looks weird remove strong ask someone for their opinion on this later -->
+
+                <h2>Index Page (Homepage)</h2>
+                <p><strong>Design Overview:</strong> The homepage uses a flexbox layout for <code>.mainboxes</code>,
+                    allowing dynamic resizing of side and main introduction boxes. The gradient background creates
+                    depth and dark backgrounds with soft text colors ensure high contrast without straining the eyes.
+                    Responsive design stacks boxes vertically on smaller screens.</p>
+
+                <p><strong>Visual Hierarchy:</strong> The larger main intro box captures primary attention, while the
+                    side intro acts as supplementary information. Consistent typography enhances cohesion.</p>
+
+                <p><strong>User Experience:</strong> Padding and margins provide breathing space. The design supports
+                    accessibility by maintaining readable contrast.</p>
+
+
+                <h2>Top Banner (Across Pages)</h2>
+                <p><strong>Design Overview:</strong> Banner images cover the container with
+                    <code>object-fit: cover</code>. Semi-transparent hover overlays improve text visibility without
+                    hiding images.
+                </p>
+
+                <p><strong>Visual Hierarchy:</strong> Text shadows and contrasting colors make headings and paragraphs
+                    stand out. Hover effects add interactivity.</p>
+
+                <p><strong>User Experience:</strong> Absolute positioning ensures proper overlay. Text remains readable
+                    over images.</p>
+
+
+                <h2>Past Page (Timeline / Archive)</h2>
+
+                <p><strong>Design Overview:</strong> Timeline uses flexbox and pseudo-elements for the central vertical
+                    line. Alternating left/right placement and timeline circles add visual clarity. Content cards
+                    maintain consistent padding, background and typography.</p>
+
+                <p><strong>Visual Hierarchy:</strong> Alternating placement guides the eye chronologically. Highlighted
+                    text draws attention to important events.</p>
+
+                <p><strong>User Experience:</strong> Media queries adjust for mobile. Circles and lines visually guide
+                    users down the timeline.</p>
+
+
+                <h2>Future Page (Split Layout / Cards)</h2>
+                <p><strong>Design Overview:</strong> Split layout balances text and images. Click-to-expand cards reveal
+                    more content. Grid layouts distribute cards adaptively.</p>
+
+                <p><strong>Visual Hierarchy:</strong> Headings and color contrast differentiate sections. Transitions
+                    emphasize interactive elements.</p>
+
+                <p><strong>User Experience:</strong> Fixed popups allow detail exploration. Responsive stacking ensures
+                    mobile usability.</p>
+
+
+                <h2>Comments Page</h2>
+
+                <p><strong>Design Overview:</strong> Flexbox layout with sticky sidebar allows navigation between
+                    sections. Main content maintains consistent dark background and readable text. Tables are structured
+                    for clarity.</p>
+
+                <p><strong>Visual Hierarchy:</strong> Sidebar highlights the active section. Section headings and
+                    colored text indicate content importance.</p>
+
+                <p><strong>User Experience:</strong> Sticky sidebar improves navigation. Layout adjusts for mobile
+                    screens.</p>
+
+
+                <h2>Slideshow Component</h2>
+                <p><strong>Design Overview:</strong> Flexbox-based slides transition horizontally. Slide content uses
+                    padding and flex alignment for readability.</p>
+
+                <p><strong>Visual Hierarchy:</strong> Slide buttons are positioned for clarity. Width-based transforms
+                    enable smooth transitions.</p>
+
+                <p><strong>User Experience:</strong> Slides allow content exploration without page reloads. Overflow
+                    handling accommodates longer text.</p>
+
+
+                <h2>Overall Design Principles</h2>
+
+                <ul>
+
+
+                    <li>Consistency: Uniform colors, fonts, and spacing create a cohesive identity.</li>
+                    <li>Responsive Design:Layouts adapt to mobile devices.</li>
+                    <li>Accessibility & Readability: High contrast, legible fonts, and spacing improve usability.</li>
+                    <li>Interactive Feedback: Hover effects, clickable cards, and slides provide cue for engagement.
+                    </li>
+                    <li>Visual Hierarchy: Headings, contrast, and layout positioning guide the user's focus.</li>
+                </ul>
+
+            </div>
+
+
+            <div id="BottomSection" class="SectionThing">
+                <!-- decide to use a table maybe figure contents after 9/09/2025 cause the lecturer said smth about talking about this page on neext lesson-->
+
+                <!-- if the slide css doesnt work remove and just add text and images -->
+                <h2>Use of &lt;alt&gt; Tags and Accessibility</h2>
+                <p>
+                    The website has been designed with <strong>accessibility</strong> in mind. All images across every
+                    page include <code>&lt;alt&gt;</code> attributes, which provide descriptive text conveying the
+                    content or purpose of the image. This ensures users who rely on <em>screen readers</em> or have
+                    images disabled can still understand the site content.
+                </p>
+
+                <h3>Page-specific accessibility:</h3>
+                <ul>
+                    <li><strong>index.html</strong>: Banner images in <code>.topbannercontainer</code> use descriptive
+                        <code>&lt;alt&gt;</code> text. While Profile images in <code>.sideprofilepic</code> also include
+                        <code>&lt;alt&gt;</code> so the page is informative even without visuals. Navigation uses
+                        semantic <code>&lt;nav&gt;</code> and anchor tags for keyboard accessibility.
+                    </li>
+
+                    <li><strong>past.html</strong>: Timeline elements (e.g., <code>.TimelineCircle</code>) include
+                        descriptive <code>&lt;alt&gt;</code> text where appropriate. Text contrast and font choices
+                        (<code>#6b6380</code> on dark backgrounds, <code>Gill Sans</code>) improve readability for
+                        visually impaired users.</li>
+
+                    <li><strong>future.html</strong>: Split layout images (<code>.leftSpilt img</code>) include
+                        descriptive <code>&lt;alt&gt;</code> text. Interactive cards (<code>.FutureCards</code>) remain
+                        keyboard-accessible via labels and checkboxes. Colour contrast is high (<code>#894766</code>
+                        headings on <code>#1D1B2C</code> background) for visibility.</li>
+
+                    <li><strong>comments.html</strong>: Sidebar images in <code>.CommentSideContainer img</code> include
+                        <code>&lt;alt&gt;</code> text. Navigation links use <code>:target</code> and
+                        <code>.active</code> states for visual feedback and tables and headings are semantic for screen
+                        readers.
+                    </li>
+                </ul>
+
+                <p>
+                    Font sizes, spacing, and contrast have been chosen to maximize readability. All interactive elements
+                    respond to hover and focus states, making the site usable for both mouse and
+                    keyboard users.
+                </p>
+            </div>
+
+
+
+
+            <h4>Website Structure & Layout</h4>
+
+            <!-- use tjis as a slide show for the diagrams into what the page looks like -->
+            <!-- the vision is like first page: the diagram second page is the result idk-->
+            <p>The website was made alongside the Pilestone Colour Blind Experts colour blindness simulator to
+                ensure all pages are clear to anyone with visual deficiencies, while providing individuals
+                with different types of colour vision deficiencies a visually appealing website no matter the colour
+                vision deficiency.</p>
+
+            <h4>Pilestone Colour Blind Compare View</h4>
+
+            <p>Select a thumbnail to display it in the larger area. Use keyboard (Tab to focus a thumbnail and
+                Enter/Space to select).</p>
+
+
+
+            <div class="CompareContainer">
+                <input type="radio" name="Compare" id="img1" checked>
+                <input type="radio" name="Compare" id="img2">
+                <input type="radio" name="Compare" id="img3">
+                <input type="radio" name="Compare" id="img4">
+                <input type="radio" name="Compare" id="img5">
+                <input type="radio" name="Compare" id="img6">
+                <input type="radio" name="Compare" id="img7">
+                <input type="radio" name="Compare" id="img8">
+
+
+                <div class="imgview" aria-live="polite">
+                    <!-- Im unsure if aria will work but this is just for accessibility (if it doesnt work remove) check https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live if it doesnt work -->
+
+                    <div class="expanded1">
+                        <p class="ImageCaption">Green Weak Deuteranomaly version of Website Example</p>
+                        <img src="Images/GreenWeak.jpg" alt="Green Weak Deuteranomaly version of Website Example">
+
+                    </div>
+
+                    <div class="expanded2">
+                        <p class="ImageCaption">Green Blind Deuteranopia version of Website Example</p>
+
+                        <img src="Images/GreenBlind.jpg" alt="Green Blind Deuteranopia version of Website Example">
+
+                    </div>
+
+                    <div class="expanded3">
+                        <p class="ImageCaption">Blue Weak Tritanomaly version of Website Example</p>
+
+                        <img src="Images/BlueWeak.jpg" alt="Blue Weak Tritanomaly version of Website Example">
+                    </div>
+
+
+                    <div class="expanded4">
+                        <p class="ImageCaption">Blue Blue Tritanopia version of Website Example</p>
+
+                        <img src="Images/BlueBlind.jpg" alt="Blue Blue Tritanopia version of Website Example">
+
+                    </div>
+
+
+                    <div class="expanded5">
+                        <p class="ImageCaption">Red Weak Protanomaly version of Website Example</p>
+
+                        <img src="Images/RedWeak.jpg" alt="Red Weak Protanomaly version of Website Example">
+
+                    </div>
+
+                    <div class="expanded6">
+                        <p class="ImageCaption">Red Blind Protanopia version of Website Example</p>
+
+                        <img src="Images/RedBlind.jpg" alt="Red Blind Protanopia version of Website Example">
+
+                    </div>
+
+                    <div class="expanded7">
+                        <p class="ImageCaption">MonoChromacy Achromatopsia version of Website Example</p>
+
+                        <img src="Images/Monochrome.jpg" alt="MonoChromacy Achromatopsia version of Website Example">
+
+                    </div>
+
+                    <div class="expanded8">
+                        <p class="ImageCaption">Blue Cone Monochormacy version of Website Example</p>
+
+                        <img src="Images/BlueMonochrome.jpg" alt="Blue Cone Monochormacy version of Website Example">
+
+                    </div>
+
+
+
+
+                </div>
+
+                <aside class="imgGridColumn" aria-label="Image selection">
+
+                    <div class="imageGrid">
+                        <label class="GridLabel" for="img1">
+                            <img src="Images/GreenWeakDeuteranomaly.png"
+                                alt="Green Weak Deuteranomaly version of Website Example">
+
+
+                        </label>
+
+                        <label class="GridLabel" for="img2">
+                            <img src="Images/GreenBlindDeuteranopia.png"
+                                alt="Green Blind Deuteranopia version of Website Example">
+
+
+                        </label>
+
+
+                        <label class="GridLabel" for="img3">
+                            <img src="Images/BlueWeakTritanomaly.png"
+                                alt="Blue Weak Tritanomaly version of Website Example">
+
+
+                        </label>
+
+
+                        <label class="GridLabel" for="img4">
+                            <img src="Images/BlueWeakTritanopia.png"
+                                alt="Blue Weak Tritanopia version of Website Example">
+
+
+                        </label>
+
+
+                        <label class="GridLabel" for="img5">
+                            <img src="Images/RedWeakProtanomaly.png"
+                                alt="Red Weak Protanomaly version of Website Example">
+
+
+                        </label>
+
+                        <label class="GridLabel" for="img6">
+                            <img src="Images/RedBlindProtanopia.png"
+                                alt="Red Blind Protanopia version of Website Example">
+
+
+                        </label>
+
+                        <label class="GridLabel" for="img7">
+                            <img src="Images/MonoChromacy_Achromatopsia.png"
+                                alt="MonoChromacy Achromatopsia version of Website Example">
+
+
+                        </label>
+
+
+                        <label class="GridLabel" for="img8">
+                            <img src="Images/BlueConeMonochormacy.png"
+                                alt="Blue Cone Monochormacy version of Website Example">
+
+
+                        </label>
+
+
+                    </div>
+
+
+                </aside>
+
+
+            </div>
+
+
+            <div class="ImageShowcase">
+                <div class="ShowcaseItem">
+                    <img src="Images/IndexpageDiagram.png" alt="Planned Index Page Diagram">
+                    <p class="ImageCaption">Planned Index Page Diagram</p>
+                </div>
+
+                <div class="ShowcaseItem">
+                    <img src="Images/IndexpageFinal.png" alt="Final Index Page">
+                    <p class="ImageCaption">Final Index Page</p>
+                </div>
+
+                <div class="ShowcaseItem">
+                    <img src="Images/PastpageDiagram.png" alt="Planned Past Page Diagram">
+                    <p class="ImageCaption">Planned Past Page Diagram</p>
+                </div>
+
+                <div class="ShowcaseItem">
+                    <img src="Images/PastpageFinal.png" alt="Final Past Page">
+                    <p class="ImageCaption">Final Past Page</p>
+                </div>
+
+                <div class="ShowcaseItem">
+                    <img src="Images/FuturepageDiagram.png" alt="Planned Future Page Diagram">
+                    <p class="ImageCaption">Planned Future Page Diagram</p>
+                </div>
+
+                <div class="ShowcaseItem">
+                    <img src="Images/FuturepageFinal.png" alt="Final Future Page">
+                    <p class="ImageCaption">Final Future Page</p>
+                </div>
+
+                <div class="ShowcaseItem">
+                    <img src="Images/Commentspagediagram.png" alt="Planned Comments Page Diagram First Half">
+                    <p class="ImageCaption">Planned Comments Page Diagram First Half</p>
+                </div>
+
+                <div class="ShowcaseItem">
+                    <img src="Images/Commentpagediagram2.png" alt="Planned Comments Page Diagram Second Half">
+                    <p class="ImageCaption">Planned Comments Page Diagram Second Half</p>
+                </div>
+
+                <div class="ShowcaseItem">
+                    <img src="Images/CommentspageFinal.png" alt="Final Comments Page First Half">
+                    <p class="ImageCaption">Final Comments Page First Half</p>
+                </div>
+
+                <div class="ShowcaseItem">
+                    <img src="Images/CommentspageFinal2.png" alt="Final Comments Page Second Half">
+                    <p class="ImageCaption">Final Comments Page Second Half</p>
+                </div>
+            </div>
+
+            <!--
+            <div class="Slideshow">
+                <input type="radio" name="Slides" id="slide1" checked>
+                <input type="radio" name="Slides" id="slide2">
+                <input type="radio" name="Slides" id="slide3">
+                <input type="radio" name="Slides" id="slide4">
+                <input type="radio" name="Slides" id="slide5">
+                <input type="radio" name="Slides" id="slide6">
+                <input type="radio" name="Slides" id="slide7">
+                <input type="radio" name="Slides" id="slide8">
+                <input type="radio" name="Slides" id="slide9">
+                <input type="radio" name="Slides" id="slide10">
+
+
+                <div class="Slide">
+                    <p class="ImageCaption">Planned Index Page Diagram</p>
+                    <img src="Images/IndexpageDiagram.png" alt="Planned Index Page Diagram">
+                    <label for="slide10" class="prev">&#10094;</label>
+                    <label for="slide2" class="next">&#10095;</label>
+                </div>
+                <div class="Slide">
+                    <p class="ImageCaption">Final Index Page</p>
+                    <img src="Images/IndexpageFinal.png" alt="Final Index Page">
+                    <label for="slide1" class="prev">&#10094;</label>
+                    <label for="slide3" class="next">&#10095;</label>
+                </div>
+
+
+                <div class="Slide">
+                    <p class="ImageCaption">Planned Past Page Diagram</p>
+                    <img src="Images/PastpageDiagram.png" alt="Planned Past Page Diagram">
+                    <label for="slide2" class="prev">&#10094;</label>
+                    <label for="slide4" class="next">&#10095;</label>
+                </div>
+
+
+                <div class="Slide">
+                    <p class="ImageCaption">Final Past Page</p>
+                    <img src="Images/PastpageFinal.png" alt="Final Past Page">
+                    <label for="slide3" class="prev">&#10094;</label>
+                    <label for="slide5" class="next">&#10095;</label>
+                </div>
+
+
+
+                <div class="Slide">
+                    <p class="ImageCaption">Planned Future Page Diagram</p>
+                    <img src="Images/FuturepageDiagram.png" alt="Planned Future Page Diagram">
+                    <label for="slide4" class="prev">&#10094;</label>
+                    <label for="slide6" class="next">&#10095;</label>
+                </div>
+
+
+
+                <div class="Slide">
+                    <p class="ImageCaption">Final Future Page</p>
+                    <img src="Images/FuturepageFinal.png" alt="Final Future Page">
+                    <label for="slide5" class="prev">&#10094;</label>
+                    <label for="slide7" class="next">&#10095;</label>
+                </div>
+
+
+                <div class="Slide">
+                    <p class="ImageCaption">Planned Comments Page Diagram First Half</p>
+                    <img src="Images/Commentspagediagram.png" alt="Planned Comments Page Diagram First Half">
+                    <label for="slide6" class="prev">&#10094;</label>
+                    <label for="slide8" class="next">&#10095;</label>
+                </div>
+
+
+                <div class="Slide">
+                    <p class="ImageCaption">Planned Comments Page Diagram Second Half</p>
+                    <img src="Images/Commentpagediagram2.png" alt="Planned Comments Page Diagram Second Half">
+                    <label for="slide7" class="prev">&#10094;</label>
+                    <label for="slide9" class="next">&#10095;</label>
+                </div>
+
+
+                <div class="Slide">
+                    <p class="ImageCaption">Final Comments Page First Half</p>
+                    <img src="Images/CommentspageFinal.png" alt="Final Comments Page First Half">
+                    <label for="slide8" class="prev">&#10094;</label>
+                    <label for="slide10" class="next">&#10095;</label>
+                </div>
+
+
+                <div class="Slide">
+                    <p class="ImageCaption">Final Comments Page Second Half</p>
+                    <img src="Images/CommentspageFinal2.png" alt="Final Comments Page Second Half">
+                    <label for="slide9" class="prev">&#10094;</label>
+                    <label for="slide1" class="next">&#10095;</label>
+                </div>
+
+
+
+
+            </div>
+
+          make sure to keep the two unicodes cause it took way too long to find them-->
+
+
+            <!--
+            <div class="slideButtons">
+                <label for="slide10" class="prev">&#10094;</label>
+                <label for="slide2" class="next">&#10095;</label>
+            </div>
+            <div class="slideButtons" style="--slide:2;">
+                <label for="slide1" class="prev">&#10094;</label>
+                <label for="slide3" class="next">&#10095;</label>
+            </div>
+            <div class="slideButtons" style="--slide:3;">
+                <label for="slide2" class="prev">&#10094;</label>
+                <label for="slide4" class="next">&#10095;</label>
+            </div>
+            <div class="slideButtons" style="--slide:4;">
+                <label for="slide3" class="prev">&#10094;</label>
+                <label for="slide5" class="next">&#10095;</label>
+            </div>
+            <div class="slideButtons" style="--slide:5;">
+                <label for="slide4" class="prev">&#10094;</label>
+                <label for="slide6" class="next">&#10095;</label>
+            </div>
+            <div class="slideButtons" style="--slide:6;">
+                <label for="slide5" class="prev">&#10094;</label>
+                <label for="slide7" class="next">&#10095;</label>
+            </div>
+            <div class="slideButtons" style="--slide:7;">
+                <label for="slide6" class="prev">&#10094;</label>
+                <label for="slide8" class="next">&#10095;</label>
+            </div>
+            <div class="slideButtons" style="--slide:8;">
+                <label for="slide7" class="prev">&#10094;</label>
+                <label for="slide9" class="next">&#10095;</label>
+            </div>
+            <div class="slideButtons" style="--slide:9;">
+                <label for="slide8" class="prev">&#10094;</label>
+                <label for="slide10" class="next">&#10095;</label>
+            </div>
+            <div class="slideButtons" style="--slide:10;">
+                <label for="slide9" class="prev">&#10094;</label>
+                <label for="slide1" class="next">&#10095;</label>
+            </div> 
+
+            </div>
+-->
+        </section>
+
+
+
+    </main>
+</body>
+
+
+
+</html>

@@ -1,0 +1,1327 @@
+/*Basic Navbar and banner*/
+
+html,
+body {
+  /* height: 100%; */
+  /* im not  positive that this will fix the gradient issue*/
+  margin: 0px;
+  overflow: visible;
+  height: auto;
+}
+
+body {
+  /* maybe add a min-height: so i can make a nicer gradient*/
+  background: linear-gradient(to bottom, #282539 40%, #894766 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+.topbannercontainer {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+
+}
+
+.topbannercontainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* im not sure why this wont work ask lecturer */
+  object-position: right;
+  min-width: 100%;
+}
+
+.topbannertext {
+  position: absolute;
+  bottom: 18px;
+  left: 20px;
+  right: 20px;
+  top: 18px;
+  background-color: rgba(56, 20, 128, 0);
+  /*make sure to use this for any opacity from nwo on*/
+  color: white;
+  padding: 0px 20px 10px 20px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.topbannertext:hover {
+  position: absolute;
+  bottom: 16px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.75);
+  /*make sure to use this for any opacity from nwo on*/
+  color: white;
+  padding: 0px 20px 10px 20px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.topbannertext h1 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 40px;
+  text-align: left;
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+
+}
+
+.topbannertext p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 14px;
+  text-align: left;
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+
+}
+
+@media only screen and (max-width: 600px) {
+  .topbannercontainer {
+    object-fit: cover;
+    object-position: right;
+    min-width: 100%;
+  }
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #1D1B2C;
+  width: 100%;
+  z-index: 1000;
+  align-self: flex-start;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar li {
+  margin: 0px;
+  padding: 0px;
+}
+
+.navbar a {
+  display: block;
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+  text-align: center;
+  padding: 16px 20px;
+  text-decoration: none;
+  /* remember this is just to remove the underline dont remove*/
+
+}
+
+.navbar a:active {
+  background-color: #282539;
+}
+
+.navbar a:hover {
+  background-color: #894766;
+  color: white;
+  cursor: pointer;
+
+}
+
+/*Index Page*/
+
+.mainboxes {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px;
+  margin-top: 20px;
+  gap: 20px
+}
+
+.sideintrobox {
+  flex: 0 0 400px;
+  background-color: #1D1B2C;
+  padding: 2%;
+  box-sizing: border-box;
+  margin-left: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+}
+
+.sideintro table {
+  width: 100%;
+  border-collapse: collapse;
+  /* if this doesnt work change it later when i can see the website again */
+}
+
+.sideintro td {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  padding: 6px;
+  color: #6b6380;
+}
+
+.sideprofilepic img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  margin-top: 40px;
+
+}
+
+.mainintrobox {
+  flex: 1 1 0;
+  background-color: #1D1B2C;
+  padding: 2%;
+  box-sizing: border-box;
+  min-width: 400px;
+  margin-right: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+}
+
+@media only screen and (max-width: 800px) {
+
+  .sideprofilepic img {
+    display: block;
+    height: auto;
+    max-width: 400px;
+    margin-top: 40px;
+
+  }
+
+
+  .sideintrobox,
+  .mainintrobox {
+    flex: 1 1 100%;
+    margin: 20px;
+    /*just pray this works*/
+  }
+}
+
+.mainintrobox h2 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  color: #6b6380;
+
+}
+
+
+.mainintrobox p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #6b6380;
+  font-size: 18px;
+}
+
+.mainintrobox li {
+  list-style: square;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #6b6380;
+  font-size: 18px;
+  margin-left: 20px;
+}
+
+.mainintrobox small {
+  list-style: square;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #6b6380;
+}
+
+
+
+/*Past Page*/
+
+.Pastbody {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px;
+}
+
+.PastContainer {
+  background-color: #1D1B2C;
+  padding: 20px;
+  color: #6b6380;
+  max-width: 800px;
+  margin: 0 auto;
+  /* keep this for centering */
+
+}
+
+.PastContainer h3 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 24px;
+  color: #6b6380;
+
+
+}
+
+.PastContainer p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  color: #6b6380;
+
+}
+
+
+
+@media only screen and (max-width: 800px) {
+  .Timeline {
+    left: 20px;
+  }
+
+
+  .Timeline::after {
+    left: 20px;
+  }
+
+  .TimelineCircle {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 60px;
+  }
+
+  .TimelineCircle::after {
+    left: 20px;
+
+  }
+
+  .Left,
+  .Right {
+    left: 0%;
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 20px;
+  }
+
+  .timelinecontent {
+    min-width: unset;
+    max-width: 50%;
+    margin: 10px 0 20px 0px;
+  }
+
+}
+
+.Timeline {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  /* fix this later same with max width if it doesnt work*/
+
+}
+
+.Timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #894766;
+  border: 4px solid #492E3D;
+  bottom: 0;
+  top: 0;
+  left: 50%;
+
+}
+
+
+.TimelineCircle {
+  padding: 20px 40px;
+  position: relative;
+  width: 40%;
+}
+
+.TimelineCircle::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #894766;
+  bottom: 0;
+  top: 0;
+  left: 50%;
+  z-index: 1;
+  border: 4px solid #492E3D;
+  border-radius: 50%;
+  /* keep it a circle for a cleaner look ig also flip colours if it doesnt look good cause lecturer said my colour scheme was messy */
+
+}
+
+.Left {
+  left: 0;
+  /* switch to auto if it doesnt work and check*/
+}
+
+.Right {
+  left: 50%;
+}
+
+
+.timelinecontent {
+  padding: 20px;
+  position: relative;
+  color: #6b6380;
+  background-color: #1D1B2C;
+  min-width: 200px;
+  max-width: 600px;
+  margin: 10px;
+
+}
+
+.timelinecontent p {
+  color: #894766;
+  font-size: 18px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.timelinecontent h3 {
+  color: #894766;
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.timelinecontent small {
+  color: #894766;
+  font-size: 16px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* this is to test if the screen can keep the margin */
+
+.Left .timelinecontent {
+  margin-right: 20px;
+}
+
+.Right .timelinecontent {
+  margin-right: 20px;
+}
+
+
+
+/* Future Page*/
+/* this is done through a spilt and cards*/
+
+.spiltLayout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  padding: 40px;
+}
+
+.leftSpilt,
+.rightSpilt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #1D1B2C;
+  overflow: hidden;
+  padding: 20px;
+
+}
+
+.rightSpilt h4 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 28px;
+  color: #6b6380;
+
+}
+
+.rightSpilt p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  color: #6b6380;
+}
+
+.leftSpilt img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.Panel {
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #4C4364;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  z-index: 1000;
+  max-width: 600px;
+  width: 75%;
+}
+
+#PopupToggle:checked~.Panel {
+  display: flex;
+}
+
+.PopUpContent {
+  background: #4C4364;
+  padding: 10px;
+  border-radius: 10px;
+  width: 600px;
+  text-align: center;
+  position: relative;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  color: black;
+}
+
+.closeIt {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 800px) {
+  .spiltLayout {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+.FutureCardsSpilt {
+  padding: 40px;
+
+}
+
+.Spilt3Grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+
+.FutureCards {
+  display: block;
+  background-color: hsl(247, 24%, 14%);
+  padding: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s ease-in;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+
+}
+
+.FutureCards summary {
+  list-style: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  color: #894766;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.FutureCards summary::after {
+  content: "+";
+  font-size: 18px;
+  color: #894766;
+  transition: transform 0.3s ease;
+}
+
+.FutureCards[open] summary::after {
+  content: "-";
+  font-size: 18px;
+  transform: rotate(180deg);
+}
+
+.FutureCardsSpilt h1 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 24px;
+  color: #1D1B2C;
+
+
+}
+
+.FutureCardsSpilt p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  color: #1D1B2C;
+
+}
+
+
+.FutureCards h2 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  color: #894766;
+
+}
+
+.FutureCards p {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.6s ease-in;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+  color: #894766;
+  text-shadow: 0 0 10px #060508;
+}
+
+.FutureCards[open] p {
+  max-height: 400px;
+  opacity: 1;
+}
+
+.FutureCards summary:focus {
+  outline: 3px solid #894766;
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+/*
+.FutureCardsSpilt h5 {
+  font-size: 24px;
+  color: #894766;
+  text-shadow: 0 0 10px #060508;
+  margin-bottom: 20px;
+}*/
+
+
+/*Comments page*/
+
+.mainContent,
+.CompareContainer,
+.CommentPageContainer {
+  height: auto;
+}
+
+.CommentPageContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 40px;
+  color: #6b6380;
+  font-size: 18px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-sizing: border-box;
+  overflow: visible;
+
+}
+
+.CommentSideBar {
+  position: sticky;
+  top: 80px;
+  background-color: #1D1B2C;
+  padding: 20px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: fit-content;
+}
+
+.CommentSideBar li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.CommentSideBar a {
+  text-decoration: none;
+  font-size: 18px;
+  background-color: #282539;
+  color: #fff;
+  display: block;
+  padding: 8px 10px;
+  transition: background-color 0.3s ease;
+}
+
+
+.CommentSideBar a:target,
+.CommentSideBar a.active {
+  background-color: #894766;
+  color: white;
+}
+
+.CommentSideBox {
+  background-color: #282539;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.CommentSideBox a {
+  display: block;
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #894766;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.CommentSideContainer img {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.CommentSideContainer li {
+  text-align: left;
+  list-style-type: square;
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+.CommentSideContainer p {
+  text-align: left;
+  font-size: 18px;
+}
+
+.CommentSideContainer h1 {
+  text-align: left;
+  font-size: 18px;
+  color: #894766;
+}
+
+.CommentSideContainer small {
+  font-size: 16px;
+  color: #6b6380;
+}
+
+.mainContentForComments {
+  flex: 1;
+  background-color: #1D1B2C;
+  padding: 20px;
+  min-height: 400px;
+  min-width: 420px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.mainContentForComments h1 {
+  font-size: 24px;
+}
+
+.mainContentForComments h2 {
+  font-size: 20px;
+
+}
+
+.mainContentForComments h3 {
+  font-size: 18px;
+}
+
+.mainContentForComments li {
+  text-align: left;
+  list-style-type: square;
+  margin-left: 20px;
+  font-size: 18px;
+  color: #6b6380;
+  padding: 6px;
+
+}
+
+
+.mainContentForComments strong {
+  font-size: 18px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.mainContentForComments table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #1D1B2C;
+  border: 2px solid #794c65;
+  color: #6b6380;
+  font-size: 18px;
+}
+
+.mainContentForComments th,
+.mainContentForComments td {
+  padding: 4px 8px;
+  text-align: left;
+  border: 1px solid #794c65;
+}
+
+.mainContentForComments th {
+  background-color: #282539;
+  color: #894766;
+}
+
+
+.SectionThing {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #282539;
+}
+
+.SectionThing h2,
+.SectionThing h3,
+.SectionThing h4 {
+  color: #894766;
+  margin-bottom: 10px;
+}
+
+
+
+/* Compare view test */
+/* remove this and add the old code if this doesnt work */
+
+
+
+.CompareContainer {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin: 20px;
+  margin-bottom: 20px;
+}
+
+
+.imgview {
+  flex: 2;
+  max-width: 70%;
+  position: relative;
+  min-height: 400px;
+}
+
+
+.imgview div {
+  display: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+.imgview img {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.imgview .caption {
+  text-align: left;
+}
+
+.imgview p {
+  text-align: left;
+  color: #6b6380;
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#img1:checked~.imgview .expanded1,
+#img2:checked~.imgview .expanded2,
+#img3:checked~.imgview .expanded3,
+#img4:checked~.imgview .expanded4,
+#img5:checked~.imgview .expanded5,
+#img6:checked~.imgview .expanded6,
+#img7:checked~.imgview .expanded7,
+#img8:checked~.imgview .expanded8 {
+  display: block;
+}
+
+#img1:checked~.imgGridColumn label[for="img1"],
+#img2:checked~.imgGridColumn label[for="img2"],
+#img3:checked~.imgGridColumn label[for="img3"],
+#img4:checked~.imgGridColumn label[for="img4"],
+#img5:checked~.imgGridColumn label[for="img5"],
+#img6:checked~.imgGridColumn label[for="img6"],
+#img7:checked~.imgGridColumn label[for="img7"],
+#img8:checked~.imgGridColumn label[for="img8"] {
+  border: 2px solid #282539;
+}
+
+.imgGridColumn {
+  flex: 1;
+  margin-top: 42px;
+
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: 10px;
+}
+
+.GridLabel {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  /* forces it to be a square cause FOR SOME REASON ED DOESNT LET ME USE ASPECT RATIO */
+  cursor: pointer;
+  border: 2px solid transparent;
+  overflow: hidden;
+  transition: border 0.3s ease;
+  background: #6b6380;
+  min-width: 80px;
+  max-width: 220px;
+}
+
+.GridLabel img {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.GridLabel:hover,
+.GridLabel:focus {
+  border: 2px solid #894766;
+}
+
+.CompareContainer input[type="radio"] {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .CompareContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imgview {
+    order: -1;
+    max-width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .imgview div {
+    position: relative;
+    display: none;
+  }
+
+  .imgGridColumn {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 10px;
+  }
+
+
+  #img1:checked~.imgview .expanded1,
+  #img2:checked~.imgview .expanded2,
+  #img3:checked~.imgview .expanded3,
+  #img4:checked~.imgview .expanded4,
+  #img5:checked~.imgview .expanded5,
+  #img6:checked~.imgview .expanded6,
+  #img7:checked~.imgview .expanded7,
+  #img8:checked~.imgview .expanded8 {
+    display: block;
+  }
+
+  .GridLabel {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    overflow: hidden;
+    transition: border 0.3s ease;
+    background: #6b6380;
+  }
+
+  .GridLabel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+}
+
+@media only screen and (max-width: 1200px) {
+  .CompareContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imgview {
+    order: -1;
+    max-width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .imgview div {
+    position: relative;
+    display: none;
+  }
+
+  .imgGridColumn {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 10px;
+  }
+
+
+  #img1:checked~.imgview .expanded1,
+  #img2:checked~.imgview .expanded2,
+  #img3:checked~.imgview .expanded3,
+  #img4:checked~.imgview .expanded4,
+  #img5:checked~.imgview .expanded5,
+  #img6:checked~.imgview .expanded6,
+  #img7:checked~.imgview .expanded7,
+  #img8:checked~.imgview .expanded8 {
+    display: block;
+  }
+
+  .GridLabel {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    overflow: hidden;
+    transition: border 0.3s ease;
+    background: #6b6380;
+
+
+  }
+
+  .GridLabel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.Slideshow {
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto;
+  position: relative;
+  overflow: hidden;
+  background: #282539;
+}
+
+.SlidePages {
+  display: flex;
+  width: 1000%;
+  transition: transform 0.6s ease;
+}
+
+/*
+.SlidePages > div {
+  width: 20%;
+  flex-shrink: 0;
+  background-color: #492E3D;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  min-height: 250px;
+}
+*/
+
+.Slide {
+
+  width: 10%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #894766;
+  height: 480px;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.Slide img {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.Slide label.prev,
+.Slide label.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  background: #282539;
+  color: #894766;
+  border-radius: 50%;
+  padding: 5px 12px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+
+#slide1:checked~.SlidePages {
+  transform: translateX(0%);
+}
+
+#slide2:checked~.SlidePages {
+  transform: translateX(-10%);
+}
+
+#slide3:checked~.SlidePages {
+  transform: translateX(-20%);
+}
+
+#slide4:checked~.SlidePages {
+  transform: translateX(-30%);
+}
+
+#slide5:checked~.SlidePages {
+  transform: translateX(-40%);
+}
+
+#slide6:checked~.SlidePages {
+  transform: translateX(-50%);
+}
+
+#slide7:checked~.SlidePages {
+  transform: translateX(-60%);
+}
+
+#slide8:checked~.SlidePages {
+  transform: translateX(-70%);
+}
+
+#slide9:checked~.SlidePages {
+  transform: translateX(-80%);
+}
+
+#slide10:checked~.SlidePages {
+  transform: translateX(-90%);
+}
+
+.Slide label.prev { left: 10px; }
+.Slide label.next { right: 10px; }
+
+
+
+.Slideshow input[type="radio"] { display: none; }
+
+@media only screen and (max-width: 800px) {
+  .CommentPageContainer {
+    flex-direction: column;
+  }
+
+  .CommentSideBar {
+    position: relative;
+    top: 0;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.ImageShowcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 40px;
+}
+
+.ShowcaseItem {
+  background: #282539;
+  color: #894766;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ShowcaseItem img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.ShowcaseItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.ImageCaption {
+  margin-top: 10px;
+  font-weight: bold;
+}
+/* keeping incase grid layout does not function*/
+/*
+.Pastbody{
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px ;
+  justify-content: flex-start;
+  background-color: white; 
+}
+
+.Pastcontent{
+  flex: 2;
+  max-width: 70%;
+  min-width: 600px;
+
+}
+
+.PastContainer{
+  max-width: 25%;
+  min-width: 200px;
+  flex: 1;
+  background-color: aqua;
+  padding: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: black;
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+@media (max-width: 800px){
+  .Pastbody{
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .Pastcontent, .PastContainer{
+    max-width: 100%;
+    min-width: unset;
+  }
+}
+
+@keyframes progress-indicator {
+  from {
+    height: 0%;
+
+  }
+  to{
+    height:100%;
+  }
+}
+
+.TimelinebarIndicator {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.TimelinebarIndicator .TimelineIndicator{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  z-index: 0;
+  background: blue;
+
+}
+
+.TimelinebarIndicator .TimelineProgress{
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 0%; 
+  background: red;
+  z-index: 0;
+  animation: progress-indicator 10s linear forwards;
+}
+
+
+.timelinePoint{
+  position: relative;
+  width: 50%;
+  padding: 20px;
+  margin: 40px 0;
+  box-sizing: border-box;
+
+
+}
+
+.timelinePoint::before{
+  content: ""; 
+  position: absolute;
+  right: -10px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  background-color: aqua;
+  z-index: 2;
+}
+
+.timelinePoint:nth-child(odd) {
+  left: 0;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.timelinePoint:nth-child(even) {
+  left: 50%;
+  text-align: left;
+  padding-left: 20px;
+}
+
+
+summary{
+  list-style: none;
+}
+
+.timelinecontent{
+  background: pink;
+  color: black;
+  padding: 20px;
+  margin: 0;
+  font-size: 18px;
+  max-width: 400px;
+  border: 2px solid white;
+  display: inline-block;
+  text-align: left;
+}
+
+.timelinecontent details {
+ cursor: pointer;
+}
+
+.timelinecontent summary h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.timelinecontent p {
+  margin: 10px 0 0 0;
+  font-size: 18px;
+}
+
+*/
