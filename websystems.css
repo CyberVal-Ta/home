@@ -188,6 +188,17 @@ body {
 
 }
 
+.mainintrobox section {
+  margin-bottom: 25px;
+}
+
+.mainintrobox hr {
+  border: none;
+  height: 1px;
+  background-color: #282539;
+  margin: 20px 0;
+}
+
 @media only screen and (max-width: 800px) {
 
   .sideprofilepic img {
