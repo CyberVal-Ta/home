@@ -232,6 +232,19 @@ body {
   align-items: center;
 }
 
+
+.introList {
+  list-style-type: square;
+  color: #6b6380;
+  font-size: 18px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.introList li {
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
 @media only screen and (max-width: 800px) {
 
   .sideprofilepic img {
